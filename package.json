@@ -1,0 +1,10 @@
+{
+  "name": "n8n-on-render",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "./start.sh"
+  },
+  "dependencies": {
+    "n8n": "1.100.1"
+  }
+}
