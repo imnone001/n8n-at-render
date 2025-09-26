@@ -10,9 +10,9 @@ services:
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
-        value: fcb
+        value: goldenduck
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: pavansp
+        value: fcb
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
@@ -24,7 +24,7 @@ services:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        value: ep-calm-mountain-ad5idp33-pooler.c-2.us-east-1.aws.neon.tech
+        value: @ep-calm-mountain-ad5idp33-pooler.c-2.us-east-1.aws.neon.tech
       - key: DB_POSTGRESDB_PORT
         value: 5432
       - key: DB_POSTGRESDB_DATABASE
@@ -33,3 +33,9 @@ services:
         value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
         value: npg_8xE9rkdKbNte
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: false
+      - key: DB_SSL
+        value: true
+      - key: DB_SSL_REJECT_UNAUTHORIZED
+        value: false
