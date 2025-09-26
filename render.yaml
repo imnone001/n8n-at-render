@@ -24,7 +24,7 @@ services:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        value: @ep-calm-mountain-ad5idp33-pooler.c-2.us-east-1.aws.neon.tech
+        value: ep-calm-mountain-ad5idp33-pooler.c-2.us-east-1.aws.neon.tech
       - key: DB_POSTGRESDB_PORT
         value: 5432
       - key: DB_POSTGRESDB_DATABASE
