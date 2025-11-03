@@ -7,20 +7,35 @@ services:
     startCommand: npm start
     autoDeploy: true
     envVars:
+      # ─── BASIC AUTH ───────────────────────────────
       - key: N8N_BASIC_AUTH_ACTIVE
         value: true
       - key: N8N_BASIC_AUTH_USER
         value: goldenduck
       - key: N8N_BASIC_AUTH_PASSWORD
         value: fcb
+
+      # ─── SERVER CONFIG ────────────────────────────
+      - key: NODE_ENV
+        value: production
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
         value: 10000
       - key: N8N_PROTOCOL
         value: https
-      - key: NODE_ENV
-        value: production
+
+      # ─── URLS & WEBHOOKS ─────────────────────────
+      - key: N8N_WEBHOOK_URL
+        value: https://n8n-goldenduck.onrender.com/
+      - key: WEBHOOK_URL
+        value: https://n8n-goldenduck.onrender.com/
+      - key: WEBHOOK_TUNNEL_URL
+        value: https://n8n-goldenduck.onrender.com/
+      - key: N8N_EDITOR_BASE_URL
+        value: https://n8n-goldenduck.onrender.com/
+
+      # ─── DATABASE CONFIG (NEON) ──────────────────
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
@@ -33,9 +48,34 @@ services:
         value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
         value: npg_8xE9rkdKbNte
+      - key: DB_POSTGRESDB_SSL
+        value: true
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: false
-      - key: DB_SSL
-        value: true
       - key: DB_SSL_REJECT_UNAUTHORIZED
+        value: false
+
+      # ─── SECURITY / CORS ─────────────────────────
+      - key: N8N_CORS_ALLOW_ORIGIN
+        value: "*"
+      - key: N8N_CORS_ALLOW_METHODS
+        value: GET,POST,OPTIONS
+      - key: N8N_CORS_ALLOW_HEADERS
+        value: Authorization,Content-Type
+
+      # ─── TIMEZONE / EXECUTION ────────────────────
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+      - key: EXECUTIONS_MODE
+        value: regular
+      - key: EXECUTIONS_PROCESS
+        value: main
+
+      # ─── ENCRYPTION KEY ──────────────────────────
+      # Use a strong random string here; it keeps your credentials persistent
+      - key: N8N_ENCRYPTION_KEY
+        value: thisisaverysecurekeychangeit123
+
+      # ─── OPTIONAL OPTIMIZATIONS ──────────────────
+      - key: N8N_METRICS
         value: false
