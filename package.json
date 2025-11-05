@@ -5,6 +5,6 @@
     "start": "./start.sh"
   },
   "dependencies": {
-    "n8n": "1.117.3"
+    "n8n": "1.118.1"
   }
 }
