@@ -35,26 +35,6 @@ services:
       - key: N8N_EDITOR_BASE_URL
         value: https://n8n-goldenduck.onrender.com/
 
-      # ─── DATABASE CONFIG (NEON) ──────────────────
-      - key: DB_TYPE
-        value: postgresdb
-      - key: DB_POSTGRESDB_HOST
-        value: ep-calm-mountain-ad5idp33-pooler.c-2.us-east-1.aws.neon.tech
-      - key: DB_POSTGRESDB_PORT
-        value: 5432
-      - key: DB_POSTGRESDB_DATABASE
-        value: neondb
-      - key: DB_POSTGRESDB_USER
-        value: neondb_owner
-      - key: DB_POSTGRESDB_PASSWORD
-        value: npg_8xE9rkdKbNte
-      - key: DB_POSTGRESDB_SSL
-        value: true
-      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-        value: false
-      - key: DB_SSL_REJECT_UNAUTHORIZED
-        value: false
-
       # ─── SECURITY / CORS ─────────────────────────
       - key: N8N_CORS_ALLOW_ORIGIN
         value: "*"
